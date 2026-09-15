@@ -1,0 +1,13 @@
+text,label
+"Hey, are we still meeting tomorrow?",ham
+"Can you send me the notes from class?",ham
+"Your package has been delivered successfully.",ham
+"Congratulations! You won a free prize. Click this link now!",spam
+"URGENT! Your account has been selected for a reward. Claim now!",spam
+"Win cash instantly by clicking this special link!",spam
+"Your bank account needs verification. Send your details immediately.",spam
+"Meeting is scheduled for 5 PM today.",ham
+"Please call me when you reach home.",ham
+"You have won a lottery prize. Claim your reward immediately.",spam
+"Your verification code is 482921.",ham
+"Limited time offer! Click now to receive your free gift.",spam
