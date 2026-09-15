@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AIShield — AI Cyber Security</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-grid"></div>
+
+<div class="glow glow-blue"></div>
+<div class="glow glow-purple"></div>
+<div class="glow glow-pink"></div>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🛡️
+        </div>
+
+        <div>
+            <h2>AI<span>Shield</span></h2>
+            <small>Cyber Intelligence</small>
+        </div>
+
+    </div>
+
+
+    <div class="menu-title">
+        MAIN MENU
+    </div>
+
+
+    <button class="side-btn active"
+            onclick="showPage('dashboard', this)">
+
+        <span>⌂</span>
+        Dashboard
+
+    </button>
+
+
+    <button class="side-btn"
+            onclick="showPage('scanner', this)">
+
+        <span>⌕</span>
+        AI Scanner
+
+    </button>
+
+
+    <button class="side-btn"
+            onclick="showPage('analytics', this)">
+
+        <span>◈</span>
+        Analytics
+
+    </button>
+
+
+    <button class="side-btn"
+            onclick="showPage('history', this)">
+
+        <span>◷</span>
+        Scan History
+
+    </button>
+
+
+    <div class="menu-title">
+        SYSTEM
+    </div>
+
+
+    <button class="side-btn"
+            onclick="showPage('about', this)">
+
+        <span>ⓘ</span>
+        About AIShield
+
+    </button>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+
+            <div class="online-dot"></div>
+
+            <div>
+                <b>AI Engine</b>
+                <small>Operational</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+    <div class="mobile-brand">
+        🛡️ AIShield
+    </div>
+
+    <div class="top-search">
+
+        <span>⌕</span>
+
+        <input
+            placeholder="Search security intelligence..."
+        >
+
+    </div>
+
+
+    <div class="top-actions">
+
+        <button class="icon-btn">
+            ◔
+        </button>
+
+        <div class="profile">
+
+            <div class="avatar">
+                AI
+            </div>
+
+            <div>
+                <b>Security Admin</b>
+                <small>Protected</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================================================= -->
+<!-- DASHBOARD -->
+<!-- ================================================= -->
+
+<section id="dashboard" class="page active">
+
+
+    <div class="welcome">
+
+        <div>
+
+            <div class="eyebrow">
+                ✦ AI SECURITY CENTER
+            </div>
+
+            <h1>
+                Welcome to
+                <span>AIShield</span>
+            </h1>
+
+            <p>
+                Intelligent protection against phishing,
+                scams and suspicious digital threats.
+            </p>
+
+        </div>
+
+
+        <button class="primary-btn"
+                onclick="openScanner()">
+
+            <span>⌕</span>
+            Start New Scan
+
+        </button>
+
+    </div>
+
+
+    <!-- STAT CARDS -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue-icon">
+                ⌕
+            </div>
+
+            <div>
+                <small>Total Scans</small>
+                <h2 id="totalScans">0</h2>
+                <p>AI analyses performed</p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green-icon">
+                ✓
+            </div>
+
+            <div>
+                <small>Safe Content</small>
+                <h2 id="safeScans">0</h2>
+                <p>Low-risk detections</p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon red-icon">
+                !
+            </div>
+
+            <div>
+                <small>Threats Found</small>
+                <h2 id="dangerScans">0</h2>
+                <p>Potential threats</p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple-icon">
+                AI
+            </div>
+
+            <div>
+                <small>Detection Engine</small>
+                <h2>ML</h2>
+                <p>Machine learning active</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO SECURITY CARD -->
+
+    <div class="security-card">
+
+
+        <div class="security-info">
+
+            <div class="eyebrow">
+                REAL-TIME PROTECTION
+            </div>
+
+            <h2>
+                Your digital world is
+                <span>under AI protection.</span>
+            </h2>
+
+            <p>
+                AIShield continuously analyzes suspicious
+                patterns and provides intelligent threat
+                classification.
+            </p>
+
+
+            <div class="protection-list">
+
+                <div>
+                    <span>✓</span>
+                    Machine Learning Detection
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    URL Pattern Analysis
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Threat Risk Scoring
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ANIMATED SHIELD -->
+
+        <div class="shield-area">
+
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+
+            <div class="shield-glow"></div>
+
+            <div class="main-shield">
+                🛡️
+
+                <div class="shield-check">
+                    ✓
+                </div>
+
+            </div>
+
+            <div class="orbit-dot dot-one"></div>
+            <div class="orbit-dot dot-two"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <div class="section-heading">
+
+        <div>
+            <small>SECURITY TOOLS</small>
+            <h2>Quick Actions</h2>
+        </div>
+
+    </div>
+
+
+    <div class="quick-grid">
+
+        <button onclick="openScannerType('url')"
+                class="quick-card">
+
+            <div class="quick-icon blue-bg">
+                🔗
+            </div>
+
+            <h3>Scan URL</h3>
+
+            <p>
+                Detect phishing websites and malicious URLs.
+            </p>
+
+            <span>Scan now →</span>
+
+        </button>
+
+
+        <button onclick="openScannerType('sms')"
+                class="quick-card">
+
+            <div class="quick-icon purple-bg">
+                💬
+            </div>
+
+            <h3>Analyze SMS</h3>
+
+            <p>
+                Detect suspicious messages and scam patterns.
+            </p>
+
+            <span>Analyze →</span>
+
+        </button>
+
+
+        <button onclick="openScannerType('email')"
+                class="quick-card">
+
+            <div class="quick-icon pink-bg">
+                ✉
+            </div>
+
+            <h3>Check Email</h3>
+
+            <p>
+                Identify phishing and suspicious email content.
+            </p>
+
+            <span>Check now →</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- SCANNER -->
+<!-- ================================================= -->
+
+<section id="scanner" class="page">
+
+
+    <div class="page-title">
+
+        <div>
+
+            <div class="eyebrow">
+                AI THREAT ANALYSIS
+            </div>
+
+            <h1>
+                Intelligent
+                <span>Scanner</span>
+            </h1>
+
+            <p>
+                Choose what you want AIShield to analyze.
+            </p>
+
+        </div>
+
+        <div class="ai-status">
+            <i></i>
+            AI Engine Online
+        </div>
+
+    </div>
+
+
+    <!-- SCANNER TYPE -->
+
+    <div class="scanner-types">
+
+        <button class="scanner-type active"
+                onclick="selectScanner('url', this)">
+
+            <b>🔗</b>
+
+            <div>
+                <strong>URL Scanner</strong>
+                <small>Phishing detection</small>
+            </div>
+
+        </button>
+
+
+        <button class="scanner-type"
+                onclick="selectScanner('sms', this)">
+
+            <b>💬</b>
+
+            <div>
+                <strong>SMS Scanner</strong>
+                <small>Scam message analysis</small>
+            </div>
+
+        </button>
+
+
+        <button class="scanner-type"
+                onclick="selectScanner('email', this)">
+
+            <b>✉</b>
+
+            <div>
+                <strong>Email Scanner</strong>
+                <small>Phishing detection</small>
+            </div>
+
+        </button>
+
+    </div>
+
+
+    <!-- URL SCANNER -->
+
+    <div id="urlPanel" class="scan-panel active">
+
+        <div class="scan-card">
+
+            <div class="scan-card-icon">
+                🔗
+            </div>
+
+            <h2>Analyze Website URL</h2>
+
+            <p>
+                Enter a URL and AIShield will extract
+                security features and classify its risk.
+            </p>
+
+
+            <div class="url-input">
+
+                <span>🌐</span>
+
+                <input
+                    id="urlInput"
+                    type="text"
+                    placeholder="https://example.com"
+                >
+
+                <button onclick="scanURL()">
+                    Analyze
+                </button>
+
+            </div>
+
+
+            <div class="input-hint">
+                🔒 Your input is analyzed by the local ML engine.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SMS -->
+
+    <div id="smsPanel" class="scan-panel">
+
+        <div class="scan-card">
+
+            <div class="scan-card-icon purple-bg">
+                💬
+            </div>
+
+            <h2>Analyze Suspicious SMS</h2>
+
+            <p>
+                Paste a suspicious message for AI analysis.
+            </p>
+
+            <textarea
+                id="smsInput"
+                placeholder="Paste suspicious SMS here..."
+            ></textarea>
+
+            <button class="full-btn"
+                    onclick="scanText('sms')">
+
+                🧠 Analyze Message
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- EMAIL -->
+
+    <div id="emailPanel" class="scan-panel">
+
+        <div class="scan-card">
+
+            <div class="scan-card-icon pink-bg">
+                ✉
+            </div>
+
+            <h2>Analyze Email</h2>
+
+            <p>
+                Analyze email content for phishing indicators.
+            </p>
+
+            <input
+                class="email-subject"
+                id="emailSubject"
+                placeholder="Email subject"
+            >
+
+            <textarea
+                id="emailInput"
+                placeholder="Paste email content here..."
+            ></textarea>
+
+            <button class="full-btn"
+                    onclick="scanText('email')">
+
+                🧠 Analyze Email
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI SCANNING -->
+
+    <div id="scanningBox" class="ai-scanning">
+
+        <div class="scanner-animation">
+
+            <div class="scan-circle"></div>
+
+            <div class="scan-shield">
+                🛡️
+            </div>
+
+        </div>
+
+        <h2>AI is analyzing...</h2>
+
+        <p id="scanText">
+            Initializing security engine
+        </p>
+
+
+        <div class="progress-track">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+        <div class="scan-percent"
+             id="scanPercent">
+
+            0%
+
+        </div>
+
+    </div>
+<!-- AI SCANNING ANIMATION -->
+<section id="scanAnimation" class="scan-animation">
+    <div class="scan-orbit">
+        <div class="scan-shield">🛡️</div>
+    </div>
+
+    <h2>AI is analyzing...</h2>
+    <p>Checking suspicious patterns and security indicators</p>
+
+    <div class="scan-progress">
+        <div class="scan-progress-bar"></div>
+    </div>
+
+    <div class="scan-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</section>
+
+    <!-- RESULT -->
+     <section
+    class="result-section"
+    id="resultSection"
+>
+
+    <div class="result-header">
+
+        <div>
+
+            <span class="result-label">
+                AI ANALYSIS COMPLETE
+            </span>
+
+            <h2>
+                Security Analysis
+            </h2>
+
+            <p>
+                AIShield has analyzed the submitted content.
+            </p>
+
+        </div>
+
+        <div
+            class="result-status"
+            id="resultLabel"
+        >
+            Safe
+        </div>
+
+    </div>
+
+
+    <div class="result-grid">
+
+
+        <!-- ================================= -->
+        <!-- CIRCULAR RISK METER -->
+        <!-- ================================= -->
+
+        <div class="risk-card">
+
+            <h3>
+                Threat Risk
+            </h3>
+
+            <div
+                class="risk-circle"
+                id="riskCircle"
+            >
+
+                <div class="risk-glow"></div>
+
+                <div class="risk-inner">
+
+                    <span
+                        id="riskValue"
+                    >
+                        0%
+                    </span>
+
+                    <small>
+                        Risk Score
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="risk-status-text">
+
+                <span>
+                    AI Confidence
+                </span>
+
+                <strong
+                    id="confidenceValue"
+                >
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- AI EXPLANATION -->
+        <!-- ================================= -->
+
+        <div class="explanation-card">
+
+            <div class="explanation-heading">
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <h3>
+                        Why did AI flag this?
+                    </h3>
+
+                    <p>
+                        Important indicators detected
+                        by the AIShield engine.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="reasonsList"
+                class="reasons-list"
+            >
+
+                <!-- JavaScript will insert
+                     reasons here -->
+
+            </div>
+
+
+            <button
+                class="report-btn"
+                onclick="downloadReport()"
+            >
+
+                <span>
+                    ↓
+                </span>
+
+                Download Security Report
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <div id="resultBox" class="result-section">
+
+        <div class="result-header">
+
+            <div class="result-status">
+
+                <div id="resultIcon"
+                     class="result-big-icon">
+
+                    ✓
+
+                </div>
+
+                <div>
+
+                    <small>AI CLASSIFICATION</small>
+
+                    <h2 id="resultTitle">
+                        Safe
+                    </h2>
+
+                    <p id="resultDescription">
+                        No major threats detected.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="risk-meter">
+
+                <div class="meter-circle">
+
+                    <strong id="riskScore">
+                        0%
+                    </strong>
+
+                    <small>RISK</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="analysis-cards">
+
+            <div>
+
+                <span>🔍</span>
+
+                <small>Classification</small>
+
+                <b id="classification">
+                    Legitimate
+                </b>
+
+            </div>
+
+
+            <div>
+
+                <span>⚡</span>
+
+                <small>Threat Level</small>
+
+                <b id="threatLevel">
+                    Low
+                </b>
+
+            </div>
+
+
+            <div>
+
+                <span>🧠</span>
+
+                <small>Confidence</small>
+
+                <b id="confidence">
+                    High
+                </b>
+
+            </div>
+
+        </div>
+
+
+        <div class="explanation">
+
+            <h3>
+                🧠 Why did AI make this decision?
+            </h3>
+
+            <div class="reason">
+
+                <span>✓</span>
+
+                <div>
+                    <b>Feature analysis completed</b>
+                    <small>
+                        URL structure and security indicators analyzed.
+                    </small>
+                </div>
+
+            </div>
+
+            <div class="reason">
+
+                <span>✓</span>
+
+                <div>
+                    <b>Machine learning prediction</b>
+                    <small>
+                        Classification generated by the trained ML model.
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ANALYTICS -->
+<!-- ================================================= -->
+
+<section id="analytics" class="page">
+
+    <div class="page-title">
+
+        <div>
+
+            <div class="eyebrow">
+                SECURITY INTELLIGENCE
+            </div>
+
+            <h1>
+                Threat
+                <span>Analytics</span>
+            </h1>
+
+            <p>
+                Overview of your AI security activity.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="analytics-grid">
+
+        <div class="analytics-main">
+
+            <div class="card-title">
+
+                <div>
+                    <small>SCAN ACTIVITY</small>
+                    <h2>Security Overview</h2>
+                </div>
+
+                <span>Last 7 scans</span>
+
+            </div>
+
+
+            <div class="bars">
+
+                <div style="height:40%">
+                    <span>Mon</span>
+                </div>
+
+                <div style="height:65%">
+                    <span>Tue</span>
+                </div>
+
+                <div style="height:50%">
+                    <span>Wed</span>
+                </div>
+
+                <div style="height:80%">
+                    <span>Thu</span>
+                </div>
+
+                <div style="height:55%">
+                    <span>Fri</span>
+                </div>
+
+                <div style="height:90%">
+                    <span>Sat</span>
+                </div>
+
+                <div style="height:70%">
+                    <span>Sun</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="threat-distribution">
+
+            <small>THREAT DISTRIBUTION</small>
+
+            <h2>Detection Status</h2>
+
+
+            <div class="donut">
+
+                <div>
+                    <strong id="analyticsTotal">
+                        0
+                    </strong>
+
+                    <small>
+                        scans
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="legend">
+
+                <div>
+                    <i class="green-dot"></i>
+                    Safe
+                    <b id="legendSafe">0</b>
+                </div>
+
+                <div>
+                    <i class="red-dot"></i>
+                    Threats
+                    <b id="legendDanger">0</b>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- HISTORY -->
+<!-- ================================================= -->
+
+<section id="history" class="page">
+
+    <div class="page-title">
+
+        <div>
+
+            <div class="eyebrow">
+                SECURITY LOGS
+            </div>
+
+            <h1>
+                Scan
+                <span>History</span>
+            </h1>
+
+            <p>
+                Recently analyzed security events.
+            </p>
+
+        </div>
+
+        <button class="secondary-btn"
+                onclick="loadHistory()">
+
+            ↻ Refresh
+
+        </button>
+
+    </div>
+
+
+    <div class="history-card">
+
+        <div class="history-head">
+
+            <span>CONTENT</span>
+            <span>RESULT</span>
+            <span>RISK</span>
+            <span>TIME</span>
+
+        </div>
+
+
+        <div id="historyBody">
+
+            <div class="empty">
+                No scan history available.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ABOUT -->
+<!-- ================================================= -->
+
+<section id="about" class="page">
+
+    <div class="about-page">
+
+        <div>
+
+            <div class="eyebrow">
+                ABOUT THE PROJECT
+            </div>
+
+            <h1>
+                Security
+                <span>Powered by AI</span>
+            </h1>
+
+            <p>
+                AIShield is an AI-based scam and phishing
+                detection system designed to analyze suspicious
+                digital content using machine learning.
+            </p>
+
+
+            <div class="tech-list">
+
+                <div>
+                    <b>01</b>
+                    <span>Machine Learning</span>
+                </div>
+
+                <div>
+                    <b>02</b>
+                    <span>Feature Engineering</span>
+                </div>
+
+                <div>
+                    <b>03</b>
+                    <span>Risk Classification</span>
+                </div>
+
+                <div>
+                    <b>04</b>
+                    <span>Security Analytics</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-visual">
+
+            <div class="big-ai">
+                🛡️
+            </div>
+
+            <div class="ai-orbit"></div>
+
+            <div class="ai-label">
+                AI
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div>
+        🛡️ <b>AIShield</b>
+    </div>
+
+    <span>
+        AI-Based Scam & Phishing Detection System
+    </span>
+
+</footer>
+
+
+</main>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
